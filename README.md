@@ -115,14 +115,18 @@ numpy
 
 ## 📁 Project Structure
 
-Braille-Hackathon/
-├── app.py              ← Streamlit web app
-├── requirements.txt    ← Dependencies
-└── README.md           ← Project documentation
-└── braille_vission_hackathon.py  ← Google Colab training notebook
+```
+Braille_Vission_Hackathon/
+│
+├── app.py                          ← Streamlit web app (main file)
+├── requirements.txt                ← Python dependencies
+├── README.md                       ← Project documentation
+└── braille_vission_hackathon.py    ← Google Colab training notebook
+```
 
 > Note: `braille_cnn.onnx` and `reverse_map.json` are auto-downloaded
 > from Google Drive at runtime — not stored in the repo.
+
 ---
 
 ## 📊 Dataset
@@ -163,7 +167,7 @@ Braille-Hackathon/
 
 ## 👤 Built By
 
-**[Miduna Varshini]**
+**Miduna Varshini**
 Solo participant — BrailleVision Hackathon 2026
 
 ---
