@@ -1,4 +1,4 @@
-*# ⠃ BrailleVision — Physical Braille to English using Camera AI
+# ⠃ BrailleVision — Physical Braille to English using Camera AI
 
 > Real-time physical Braille recognition using CNN + OpenCV + Streamlit
 
