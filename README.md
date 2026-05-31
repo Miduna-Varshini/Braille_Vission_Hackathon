@@ -100,3 +100,75 @@ streamlit run app.py
 ---
 
 ## 📦 Requirements
+streamlit
+onnxruntime
+opencv-python-headless
+gdown
+gtts
+Pillow
+numpy
+
+---
+
+## 📁 Project Structure
+Braille-Hackathon/
+├── app.py              ← Streamlit web app
+├── requirements.txt    ← Dependencies
+└── README.md           ← Project documentation
+
+---
+
+## 📊 Dataset
+
+- Source: Kaggle — Braille Character Image Classification
+- Link: https://www.kaggle.com/datasets/mdismielhossenabir/braille-character-image-classification
+- Images: 2080 total, 26 classes (A–Z)
+- Image size: 50×50 pixels, grayscale
+
+---
+
+## 🔄 What Was Reused
+
+| Item | Source |
+|---|---|
+| Dataset | Kaggle (mdismielhossenabir) |
+| TensorFlow | Open source library |
+| OpenCV | Open source library |
+| Streamlit | Open source framework |
+
+---
+
+## 🔨 What Was Built During Hackathon
+
+- CNN model architecture and training pipeline
+- OpenCV Braille dot detection and cell segmentation
+- ONNX conversion for Streamlit Cloud deployment
+- Complete Streamlit web app with camera and speech
+- Full end-to-end pipeline from image to spoken English
+
+---
+
+## 🌐 Live Demo
+
+👉 **App:** https://braille-hackathon-rgiodfqrpcjssu6yku77wf.streamlit.app/
+
+---
+
+## 👤 Built By
+
+**[Your Name]**
+Solo participant — BrailleVision Hackathon 2026
+
+---
+
+## ♿ Accessibility Impact
+
+BrailleVision helps:
+- Teachers working with visually impaired students
+- Family members and caregivers
+- Healthcare workers
+- Anyone who needs to understand Braille instantly
+
+---
+
+*Built with ❤️ for BrailleVision Hackathon 2026*
