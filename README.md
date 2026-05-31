@@ -42,3 +42,61 @@ physical Braille into spoken English using just a camera.
 ---
 
 ## 🧠 Model Architecture**
+Input (50x50 grayscale)
+↓
+Conv2D (32 filters) → MaxPooling
+↓
+Conv2D (64 filters) → MaxPooling
+↓
+Conv2D (128 filters) → MaxPooling
+↓
+Flatten → Dense (256) → Dropout (0.5)
+↓
+Dense (26) → Softmax
+↓
+Output: A to Z
+
+### Training Results
+- Dataset: 2080 images, 26 classes (A–Z)
+- Epochs: 20
+- Optimizer: Adam
+- Training Accuracy: **99%**
+- Validation Accuracy: **100%**
+
+---
+
+## 🔍 How It Works
+
+**Step 1 — Capture**
+User uploads a Braille image or scans using live camera.
+
+**Step 2 — Detect**
+OpenCV converts image to grayscale, applies thresholding,
+detects Braille dot columns and segments each character cell.
+
+**Step 3 — Predict**
+Each cell is fed to the CNN model which predicts the letter.
+All letters are joined to form the complete text.
+
+**Step 4 — Speak**
+gTTS converts the recognized text to speech and plays it aloud.
+
+---
+
+## 🚀 Run Locally
+
+```bash
+# Clone the repo
+git clone https://github.com/codelovecore23/Braille-Hackathon.git
+cd Braille-Hackathon
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the app
+streamlit run app.py
+```
+
+---
+
+## 📦 Requirements
