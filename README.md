@@ -167,7 +167,7 @@ Braille_Vission_Hackathon/
 
 ## 👤 Built By
 
-**Miduna-Varshini**
+**Miduna Varshini M A**
 Solo participant — BrailleVision Hackathon 2026
 
 ---
