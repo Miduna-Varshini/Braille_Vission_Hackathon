@@ -41,20 +41,22 @@ physical Braille into spoken English using just a camera.
 
 ---
 
-## 🧠 Model Architecture**
-Input (50x50 grayscale)
-↓
-Conv2D (32 filters) → MaxPooling
-↓
-Conv2D (64 filters) → MaxPooling
-↓
-Conv2D (128 filters) → MaxPooling
-↓
-Flatten → Dense (256) → Dropout (0.5)
-↓
-Dense (26) → Softmax
-↓
-Output: A to Z
+## 🧠 Model Architecture
+
+```mermaid
+flowchart TD
+    A[📥 Input — 32x32 Grayscale Image] --> B[Conv2D — 32 filters 3x3 + ReLU]
+    B --> C[MaxPooling 2x2]
+    C --> D[Conv2D — 64 filters 3x3 + ReLU]
+    D --> E[MaxPooling 2x2]
+    E --> F[Conv2D — 128 filters 3x3 + ReLU]
+    F --> G[MaxPooling 2x2]
+    G --> H[Flatten]
+    H --> I[Dense — 256 neurons + ReLU]
+    I --> J[Dropout — 0.5]
+    J --> K[Dense — 26 neurons + Softmax]
+    K --> L[📤 Output — A to Z]
+```
 
 ### Training Results
 - Dataset: 2080 images, 26 classes (A–Z)
@@ -100,6 +102,7 @@ streamlit run app.py
 ---
 
 ## 📦 Requirements
+
 streamlit
 onnxruntime
 opencv-python-headless
@@ -111,11 +114,15 @@ numpy
 ---
 
 ## 📁 Project Structure
+
 Braille-Hackathon/
 ├── app.py              ← Streamlit web app
 ├── requirements.txt    ← Dependencies
 └── README.md           ← Project documentation
+└── braille_vission_hackathon.py  ← Google Colab training notebook
 
+> Note: `braille_cnn.onnx` and `reverse_map.json` are auto-downloaded
+> from Google Drive at runtime — not stored in the repo.
 ---
 
 ## 📊 Dataset
@@ -156,7 +163,7 @@ Braille-Hackathon/
 
 ## 👤 Built By
 
-**[Your Name]**
+**[Miduna Varshini]**
 Solo participant — BrailleVision Hackathon 2026
 
 ---
